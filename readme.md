@@ -6,13 +6,15 @@
 
 3. Copy `key.json` to sample code root folder
 
-4. To test DetectIntent with Audio Output, run
+4. Update `projectId` in `detectIntent.js` and `streamingDetectIntent.js`
+
+5. To test DetectIntent with Audio Output, run
 
 ```shell
 node detectIntent
 ```
 
-5. To test StreamingDetectIntent with Audio Input and output, run
+6. To test StreamingDetectIntent with Audio Input and output, run
 
 ```shell
 node streamingDetectIntent

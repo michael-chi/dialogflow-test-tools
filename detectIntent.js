@@ -6,7 +6,7 @@ const util = require('util');
  * Send a query to the dialogflow agent, and return the query result.
  * @param {string} projectId The project to be used
  */
-async function runSample(projectId = 'roaming-284203') {
+async function runSample(projectId = '<PROJECT-ID>') {
     // A unique identifier for the given session
     const sessionId = uuid.v4();
 

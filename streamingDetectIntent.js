@@ -108,4 +108,4 @@ async function streamingDetectIntent(
   }
   
 
-streamingDetectIntent('roaming-284203', uuid.v4(), '/home/michi/src/grpc/df-client/test2.wav','AUDIO_ENCODING_LINEAR_16',24000,'zh-TW');
+streamingDetectIntent('<PROJECT-ID>', uuid.v4(), './test2.wav','AUDIO_ENCODING_LINEAR_16',24000,'zh-TW');
