@@ -18,7 +18,7 @@ async function streamingDetectIntent(
     const dialogflow = require('@google-cloud/dialogflow');
   
     // Instantiates a session client
-    const sessionClient = new dialogflow.v2beta1.SessionsClient({ keyFilename: '/home/michi/src/grpc/df-client/key.json' });
+    const sessionClient = new dialogflow.v2beta1.SessionsClient({ keyFilename: './key.json' });
   
     // The path to the local file on which to perform speech recognition, e.g.
     // /path/to/audio.raw const filename = '/path/to/audio.raw';
@@ -82,7 +82,7 @@ async function streamingDetectIntent(
           // Instantiates a context client
           const contextClient = new dialogflow.ContextsClient();
           //console.log(`  Response: ${result.fulfillmentText}`);
-          util.promisify(fs.writeFile)(`/home/michi/src/grpc/df-client/${sessionId}-result.wav`, data.outputAudio, 'binary');
+          util.promisify(fs.writeFile)(`./${sessionId}-result.wav`, data.outputAudio, 'binary');
           console.log(JSON.stringify(data));
         }
       }

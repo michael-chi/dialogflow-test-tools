@@ -11,7 +11,7 @@ async function runSample(projectId = 'roaming-284203') {
     const sessionId = uuid.v4();
 
     // Create a new session
-    const sessionClient = new dialogflow.v2beta1.SessionsClient({ keyFilename: '/home/michi/src/grpc/df-client/key.json' });
+    const sessionClient = new dialogflow.v2beta1.SessionsClient({ keyFilename: './key.json' });
     const sessionPath = sessionClient.projectAgentSessionPath(projectId, sessionId);
     // The text query request.
     const request = {
@@ -33,7 +33,7 @@ async function runSample(projectId = 'roaming-284203') {
         console.log('Detected intent:');
         const audioFile = responses[0].outputAudio;
         console.log(JSON.stringify(responses[0]));
-        util.promisify(fs.writeFile)(`/home/michi/src/grpc/df-client/${sessionId}.wav`, audioFile, 'binary');
+        util.promisify(fs.writeFile)(`./${sessionId}.wav`, audioFile, 'binary');
       });
 }
 
