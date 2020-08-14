@@ -8,13 +8,15 @@
 
 4. Update `projectId` in `detectIntent.js` and `streamingDetectIntent.js`
 
-5. To test DetectIntent with Audio Output, run
+5. Run `npm install`
+
+6. To test DetectIntent with Audio Output, run
 
 ```shell
 node detectIntent
 ```
 
-6. To test StreamingDetectIntent with Audio Input and output, run
+7. To test StreamingDetectIntent with Audio Input and output, run
 
 ```shell
 node streamingDetectIntent
